@@ -1,6 +1,5 @@
 import * as React from "react";
 import * as data from "../Content/Logs.json";
-import { Logbook, Log } from "./Types.ts";
 
 export default function LogBookComponent() {
   const records = JSON.parse(JSON.stringify(data));
