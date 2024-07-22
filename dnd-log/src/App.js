@@ -1,22 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
+import LogBookComponent from './Components/Logs.tsx'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          my turn for a change
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <LogBookComponent/>
       </header>
     </div>
   );
