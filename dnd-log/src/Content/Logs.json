@@ -1,0 +1,11 @@
+{
+  "Logs": [
+    {
+      "LogId": 0,
+      "Title": "The first log",
+      "Location": "Diamond horn region",
+      "Entities": ["Gregor Pepper", "Roland", "Akira", "Bard Romance"],
+      "Description": "The indiviudlas sent to a tavern, perparing to jounrye to Berevik for a simple job hunt in the big city"
+    }
+  ]
+}
