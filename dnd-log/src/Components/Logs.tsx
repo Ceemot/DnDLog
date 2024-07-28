@@ -6,21 +6,33 @@ export default function LogBookComponent() {
   return (
     <ul>
       {records.Logs.map((item) => (
-        <LogComponent record={item} />
+        <LogListItem record={item} />
       ))}
     </ul>
+  );
+}
+
+function LogListItem(props) {
+  const record = props.record;
+  return (
+    <div
+      className="Log-item-active"
+      style={{ padding: "10px", textAlign: "left" }}
+    >
+      <h3>
+        {record.Title} : {record.Location}
+      </h3>
+    </div>
   );
 }
 
 function LogComponent(props) {
   const record = props.record;
   return (
-    <div style={{border:"2px solid purple"}}>
-      <h1>Title</h1>
-      <p>{record.Title}</p>
-      <h2>Location</h2>
-      <p>{record.Location}</p>
-      <h3>Details</h3>
+    <div className="Log-item-active" style={{ padding: "10px" }}>
+      <h3>
+        {record.Title} : {record.Location}
+      </h3>
       <p>{record.Description}</p>
     </div>
   );
