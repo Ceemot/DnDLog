@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.Log-item-active {
+  background-color: black;
+}
+
+.Log-item-active:hover {
+  background-color: rgb(15, 10, 10);
+  cursor:default;
+}
