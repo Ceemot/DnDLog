@@ -1,14 +1,8 @@
-import './App.css';
-import LogBookComponent from './Components/Logs.tsx'
+import "./App.css";
+import Page from "./Components/Page.tsx";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <LogBookComponent/>
-      </header>
-    </div>
-  );
+  return <Page />;
 }
 
 export default App;

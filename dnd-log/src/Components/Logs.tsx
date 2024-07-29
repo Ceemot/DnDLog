@@ -5,7 +5,7 @@ import Collapsible from "react-collapsible";
 export default function LogBookComponent() {
   const records = JSON.parse(JSON.stringify(data));
   return (
-    <ul>
+    <ul style={{ marginBlockStart: "0px", padding: "40px" }}>
       {records.Logs.map((item) => (
         <LogListItem record={item} />
       ))}
