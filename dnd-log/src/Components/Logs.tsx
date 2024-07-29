@@ -32,15 +32,3 @@ function LogListItem(props) {
     </div>
   );
 }
-
-function LogComponent(props) {
-  const record = props.record;
-  return (
-    <div className="Log-item-active" style={{ padding: "10px" }}>
-      <h3>
-        {record.Title} : {record.Location}
-      </h3>
-      <p>{record.Description}</p>
-    </div>
-  );
-}
