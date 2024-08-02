@@ -1,6 +1,8 @@
 import * as React from "react";
 import { useState } from "react";
 import { Log } from "../Components/Types";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function AddLog() {
   const [formData, setFormData] = useState({
@@ -28,8 +30,19 @@ export default function AddLog() {
     };
     setOutputText(JSON.stringify(logItem, undefined, 4));
   };
-  //Was not sure how to make an array in entities, was thinking a checkbox for party members
-  //Also the css on this page is whack
+
+  //I can't fucking get this to work with the other onclick event
+
+  function displayNotify() {
+    const notify = () =>
+      toast.success("Text copied", {
+        theme: "dark",
+        position: "bottom-center",
+        autoClose: 1500,
+        hideProgressBar: true,
+      });
+  }
+
   return (
     <div style={{ marginBlockStart: "0px", padding: "40px" }}>
       <form className="inputForm" onSubmit={handleSubmit}>
@@ -93,7 +106,15 @@ export default function AddLog() {
           className="theOutput"
           value={outputText}
           readOnly
+          onClick={async () => {
+            if ("clipboard" in navigator) {
+              await navigator.clipboard.writeText(outputText);
+            } else {
+              document.execCommand("copy", true, outputText);
+            }
+          }}
         />
+        <ToastContainer />
       </div>
     </div>
   );
