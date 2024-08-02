@@ -31,17 +31,13 @@ export default function AddLog() {
     setOutputText(JSON.stringify(logItem, undefined, 4));
   };
 
-  //I can't fucking get this to work with the other onclick event
-
-  function displayNotify() {
-    const notify = () =>
-      toast.success("Text copied", {
-        theme: "dark",
-        position: "bottom-center",
-        autoClose: 1500,
-        hideProgressBar: true,
-      });
-  }
+  const notify = () =>
+    toast.success("Text copied", {
+      theme: "dark",
+      position: "bottom-center",
+      autoClose: 1500,
+      hideProgressBar: true,
+    });
 
   return (
     <div style={{ marginBlockStart: "0px", padding: "40px" }}>
@@ -109,8 +105,14 @@ export default function AddLog() {
           onClick={async () => {
             if ("clipboard" in navigator) {
               await navigator.clipboard.writeText(outputText);
+              {
+                notify();
+              }
             } else {
               document.execCommand("copy", true, outputText);
+              {
+                notify();
+              }
             }
           }}
         />
