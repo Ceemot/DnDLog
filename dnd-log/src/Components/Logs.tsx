@@ -7,7 +7,9 @@ export default function LogBookComponent() {
   return (
     <ul style={{ marginBlockStart: "0px", padding: "40px" }}>
       {records.Logs.map((item) => (
-        <LogListItem record={item} />
+        <LogListItem
+        key={item.LogId} 
+        record={item} />
       ))}
     </ul>
   );
