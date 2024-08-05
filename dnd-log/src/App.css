@@ -2,6 +2,7 @@
   text-align: center;
   background-color: black;
   min-height: 100vh;
+  cursor: default;
 }
 
 .App-header {
@@ -30,7 +31,6 @@
 
 .Log-item-active:hover {
   background-color: rgb(15, 10, 10);
-  cursor: default;
 }
 
 .Navigation {
@@ -62,7 +62,6 @@
   height: 150px;
 }
 .theOutput {
-  cursor: default;
   width: 600px;
   height: 200px;
   background: black;
