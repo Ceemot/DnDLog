@@ -104,15 +104,9 @@ export default function AddLog() {
           readOnly
           onClick={async () => {
             if ("clipboard" in navigator) {
-              await navigator.clipboard.writeText(outputText);
-              {
-                notify();
-              }
-            } else {
-              document.execCommand("copy", true, outputText);
-              {
-                notify();
-              }
+              navigator.clipboard
+                .writeText(",\n" + outputText) // Using .then can skip the await
+                .then(() => notify());
             }
           }}
         />
