@@ -6,9 +6,9 @@ export default function DescriptionText(props) {
 
   const descriptionRecords = JSON.parse(JSON.stringify(data));
   descriptionRecords.descriptions.forEach((element) => {
-    text = text.replace(element.name, `<b>${element.name}</b>`);
+    text = text.replace(element.name, `<Tooltip title="${element.fullText}"><span style="color:orange;">${element.name}</span></Tooltip>`);
   });
   console.log(descriptionRecords);
 
-  return <span>{text}</span>;
+  return <div dangerouslySetInnerHTML={{__html:text}}/>
 }
