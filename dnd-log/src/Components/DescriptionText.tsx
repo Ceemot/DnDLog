@@ -1,14 +1,28 @@
 import * as React from "react";
 import * as data from "../Content/Descriptions.json";
+import Tooltip from "@mui/material/Tooltip/Tooltip";
+import Typography from "@mui/material/Typography/Typography";
+
+type Descriptions = Record<string, string>;
 
 export default function DescriptionText(props) {
-  var text = props.description;
+  var text = props.description.split(" ");
+  let listOfWords: (string | React.ReactNode)[] = [];
 
-  const descriptionRecords = JSON.parse(JSON.stringify(data));
-  descriptionRecords.descriptions.forEach((element) => {
-    text = text.replace(element.name, `<Tooltip title="${element.fullText}"><span style="color:orange;">${element.name}</span></Tooltip>`);
-  });
-  console.log(descriptionRecords);
+  const descriptionRecords: Descriptions = JSON.parse(JSON.stringify(data));
+  for (let word of text) {
+    if (word in data) {
+      listOfWords.push(
+        <Tooltip title={data[word]}>
+          <Typography display={"inline"} sx={{ textDecoration: "underline" }}>
+            {word}
+          </Typography>
+        </Tooltip>
+      );
+    } else {
+      listOfWords.push(" " + word + " ");
+    }
+  }
 
-  return <div dangerouslySetInnerHTML={{__html:text}}/>
+  return <Typography>{listOfWords}</Typography>;
 }

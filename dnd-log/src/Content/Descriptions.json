@@ -1,8 +1,4 @@
 {
-  "descriptions": [
-    {
-      "name": "Berovic",
-      "fullText": "The Main city in the campaign"
-    }
-  ]
+  "Berovic": "The Main city in the campaign",
+  "shat": "Past tense of shit"
 }
