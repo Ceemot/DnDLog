@@ -1,7 +1,7 @@
 {
   "name": "dnd-log",
   "version": "0.1.0",
-  "homepage": "https://xzantim.github.io/DnDLog/",
+  "homepage": "https://Ceemot.github.io/DnDLog/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.13.0",
