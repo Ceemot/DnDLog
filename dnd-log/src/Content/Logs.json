@@ -1,18 +1,18 @@
 {
   "Logs": [
     {
-      "LogId": 0,
-      "Title": "The first log",
-      "Location": "Diamond horn region",
-      "Entities": ["Gregor Pepper", "Roland", "Akira", "Bard Romance"],
-      "Description": "The indiviudlas sent to a tavern, perparing to journey to Berovic for a simple job hunt in the big city"
+      "logId": 0,
+      "title": "The first log",
+      "location": "Diamond horn region",
+      "entities": ["Gregor Pepper", "Roland", "Akira", "Bard Romance"],
+      "description": "The individuals sent to a tavern, perparing to journey to Berovic for a simple job hunt in the big city"
     },
     {
-      "LogId": 1,
-      "Title": "The second log",
-      "Location": "Berovic",
-      "Entities": ["Gregor Pepper", "Roland", "Akira", "Bard Romance"],
-      "Description": "Party shat the bed trying to apprehend a grey humanoid that snuck past them."
+      "logId": 1,
+      "title": "The second log",
+      "location": "Berovic",
+      "entities": ["Gregor Pepper", "Roland", "Akira", "Bard Romance"],
+      "description": "Party shat the bed in Berovic trying to apprehend a grey humanoid that snuck past them."
     }
   ]
 }
