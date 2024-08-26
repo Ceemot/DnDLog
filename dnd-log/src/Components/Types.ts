@@ -1,11 +1,11 @@
 export interface Logbook {
-  Logs: Log[];
+  logs: Log[];
 }
 
 export interface Log {
-  LogId: number;
-  Title: string;
-  Location: string;
-  Entities: string[];
-  Description: string;
+  logId: number;
+  title: string;
+  location: string;
+  entities: string[];
+  description: string;
 }

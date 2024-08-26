@@ -1,5 +1,5 @@
 {
-  "Logs": [
+  "logs": [
     {
       "logId": 0,
       "title": "The first log",
@@ -15,11 +15,11 @@
       "description": "Party shat the bed in Berovic trying to apprehend a grey humanoid that snuck past them."
     },
     {
-      "LogId": 3,
-      "Title": "third entry test",
-      "Location": "online",
-      "Entities": ["DM and lvar"],
-      "Description": "this is a test entry"
+      "logId": 2,
+      "title": "third entry test",
+      "location": "online",
+      "entities": ["DM and lvar"],
+      "description": "this is a test entry"
     }
   ]
 }

@@ -7,7 +7,7 @@ export default function LogBookComponent() {
   const records = JSON.parse(JSON.stringify(data));
   return (
     <ul style={{ marginBlockStart: "0px", padding: "40px" }}>
-      {records.Logs.map((item) => (
+      {records.logs.map((item) => (
         <LogListItem key={item.logId} record={item} />
       ))}
     </ul>

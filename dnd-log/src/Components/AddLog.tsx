@@ -25,11 +25,11 @@ export default function AddLog() {
   const handleSubmit = (event) => {
     event.preventDefault();
     var logItem: Log = {
-      LogId: 3,
-      Title: formData.title,
-      Location: formData.location,
-      Entities: formData.entities.split(","),
-      Description: formData.description,
+      logId: 3,
+      title: formData.title,
+      location: formData.location,
+      entities: formData.entities.split(","),
+      description: formData.description,
     };
     setOutputText(JSON.stringify(logItem, undefined, 4));
   };
@@ -51,7 +51,7 @@ export default function AddLog() {
             rowSpacing={1}
             columnSpacing={{ xs: 1, sm: 2, md: 3 }}
           >
-            <Grid item xs={2} textAlign={'left'}>
+            <Grid item xs={2} textAlign={"left"}>
               <label className="formLabel" htmlFor="title">
                 Title:
               </label>
@@ -66,7 +66,7 @@ export default function AddLog() {
                 onChange={handleChange}
               />
             </Grid>
-            <Grid item xs={2} textAlign={'left'}>
+            <Grid item xs={2} textAlign={"left"}>
               <label className="formLabel" htmlFor="location">
                 Location:
               </label>
@@ -81,7 +81,7 @@ export default function AddLog() {
                 onChange={handleChange}
               />
             </Grid>
-            <Grid item xs={2} textAlign={'left'}>
+            <Grid item xs={2} textAlign={"left"}>
               <label className="formLabel" htmlFor="entities">
                 Entities:
               </label>
@@ -96,7 +96,7 @@ export default function AddLog() {
                 onChange={handleChange}
               />
             </Grid>
-            <Grid item xs={2} textAlign={'left'}>
+            <Grid item xs={2} textAlign={"left"}>
               <label className="formLabel" htmlFor="description">
                 Description:
               </label>
@@ -109,8 +109,8 @@ export default function AddLog() {
                 value={formData.description}
                 onChange={handleChange}
               />
-            </Grid>            
-            <Grid item xs={2}/>
+            </Grid>
+            <Grid item xs={2} />
             <Grid item xs={10}>
               <Button variant="contained" type="submit">
                 Submit
