@@ -13,6 +13,13 @@
       "location": "Berovic",
       "entities": ["Gregor Pepper", "Roland", "Akira", "Bard Romance"],
       "description": "Party shat the bed in Berovic trying to apprehend a grey humanoid that snuck past them."
+    },
+    {
+      "LogId": 3,
+      "Title": "third entry test",
+      "Location": "online",
+      "Entities": ["DM and lvar"],
+      "Description": "this is a test entry"
     }
   ]
 }
