@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/DnDLog/static/css/main.9ea899de.css",
-    "main.js": "/DnDLog/static/js/main.1f9f092c.js",
+    "main.js": "/DnDLog/static/js/main.d284a851.js",
     "static/js/453.6deb884c.chunk.js": "/DnDLog/static/js/453.6deb884c.chunk.js",
     "index.html": "/DnDLog/index.html",
     "main.9ea899de.css.map": "/DnDLog/static/css/main.9ea899de.css.map",
-    "main.1f9f092c.js.map": "/DnDLog/static/js/main.1f9f092c.js.map",
+    "main.d284a851.js.map": "/DnDLog/static/js/main.d284a851.js.map",
     "453.6deb884c.chunk.js.map": "/DnDLog/static/js/453.6deb884c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9ea899de.css",
-    "static/js/main.1f9f092c.js"
+    "static/js/main.d284a851.js"
   ]
 }
