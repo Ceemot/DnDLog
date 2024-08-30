@@ -6,7 +6,7 @@ import DescriptionText from "./DescriptionText.tsx";
 export default function LogBookComponent() {
   const records = JSON.parse(JSON.stringify(data));
   return (
-    <ul style={{ marginBlockStart: "0px" }}>
+    <ul style={{ marginBlockStart: "20px" }}>
       {records.logs.map((item) => (
         <LogListItem key={item.logId} record={item} />
       ))}
@@ -19,7 +19,7 @@ function LogListItem(props) {
   return (
     <div
       className="Log-item-active"
-      style={{ padding: "10px", textAlign: "left" }}
+      style={{ padding: "10px", textAlign: "center" }}
     >
       <Collapsible
         trigger={

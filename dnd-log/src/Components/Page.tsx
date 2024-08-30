@@ -1,6 +1,5 @@
 import * as React from "react";
 import LogBookComponent from "./Logs.tsx";
-import { useState } from "react";
 import AddLog from "./AddLog.tsx";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -54,10 +53,11 @@ export default function TabManager() {
       sx={{
         display: `flex`,
         flex: `1`,
-        bgcolor: "black",
         height: "100%",
         width: "100%",
         position: "relative",
+        margin: "auto",
+        justifyContent: "center",
       }}
     >
       <AppBar position="fixed">
@@ -65,11 +65,10 @@ export default function TabManager() {
           value={value}
           onChange={handleChange}
           centered
-          indicatorColor="secondary"
           textColor="inherit"
           variant="fullWidth"
           aria-label="Logbook"
-          style={{ background: "black" }}
+          TabIndicatorProps={{ style: { backgroundColor: "white" } }}
         >
           <Tab label="View Logs" {...a11yProps(0)} />
           <Tab label="Add Log" {...a11yProps(0)} />
@@ -84,24 +83,3 @@ export default function TabManager() {
     </Box>
   );
 }
-
-// export default function Page() {
-//   const [pageMode, setPageMode] = useState(0);
-
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         {pageMode === 0 ? "DnD Logs" : "Add Records"}
-//       </header>
-//       <div className="Navigation">
-//         <ul>
-//           <li onClick={() => setPageMode(0)}>DnD Logs</li>
-//           <li onClick={() => setPageMode(1)}>Add Records</li>
-//         </ul>
-//       </div>
-//       <div className="App-body">
-//         {pageMode === 0 ? <LogBookComponent /> : <AddLog />}
-//       </div>
-//     </div>
-//   );
-// }
