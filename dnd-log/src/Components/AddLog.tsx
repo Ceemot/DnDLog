@@ -43,7 +43,7 @@ export default function AddLog() {
     });
 
   return (
-    <div style={{ marginBlockStart: "0px", padding: "40px" }}>
+    <div style={{ marginBlockStart: "0px", padding: "10px" }}>
       <form className="inputForm" onSubmit={handleSubmit}>
         <Box alignItems={"center"} display={"flex"}>
           <Grid

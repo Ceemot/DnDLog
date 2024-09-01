@@ -24,5 +24,5 @@ export default function DescriptionText(props) {
     }
   }
 
-  return <Typography align="center">{listOfWords}</Typography>;
+  return <Typography>{listOfWords}</Typography>;
 }

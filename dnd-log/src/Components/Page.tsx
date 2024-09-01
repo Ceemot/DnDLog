@@ -4,8 +4,7 @@ import AddLog from "./AddLog.tsx";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
-import { AppBar, makeStyles, Typography } from "@mui/material";
-import { useTheme } from "@emotion/react";
+import { AppBar, Typography } from "@mui/material";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -26,7 +25,7 @@ function CustomTabPanel(props: TabPanelProps) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
+        <Box>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -41,7 +40,6 @@ function a11yProps(index: number) {
   };
 }
 export default function TabManager() {
-  const theme = useTheme();
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -49,18 +47,16 @@ export default function TabManager() {
   };
 
   return (
-    <Box
-      sx={{
-        display: `flex`,
-        flex: `1`,
-        height: "100%",
-        width: "100%",
-        position: "relative",
-        margin: "auto",
-        justifyContent: "center",
-      }}
-    >
-      <AppBar position="fixed">
+    <Box>
+      <AppBar position="sticky">
+        <Typography
+          variant="h5"
+          component={"div"}
+          align="center"
+          paddingTop={"10px"}
+        >
+          DnDLogs
+        </Typography>
         <Tabs
           value={value}
           onChange={handleChange}
