@@ -1,8 +1,14 @@
+html{
+  color-scheme: dark light;
+  cursor:default;
+}
+
 .App {
   text-align: center;
   background-color: black;
   min-height: 100vh;
   cursor: default;
+  color: white;
 }
 
 .App-header {
@@ -26,11 +32,16 @@
 }
 
 .Log-item-active {
-  background-color: black;
+  color:white;
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center;
 }
 
 .Log-item-active:hover {
-  background-color: rgb(15, 10, 10);
+  background-color: #686868ad;
 }
 
 .Navigation {

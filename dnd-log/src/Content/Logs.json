@@ -19,7 +19,7 @@
       "title": "third entry test",
       "location": "online",
       "entities": ["DM and lvar"],
-      "description": "this is a test entry"
+      "description": "this is a test entry to see how containing text in a fuller box will appear when all content is centered. Now I will write controller twelve times. Controller controller controller controller controller controller controller controller controller controller controller controller."
     }
   ]
 }

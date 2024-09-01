@@ -14,7 +14,7 @@ export default function DescriptionText(props) {
     if (word in data) {
       listOfWords.push(
         <Tooltip title={data[word]}>
-          <Typography display={"inline"} sx={{ textDecoration: "underline" }}>
+          <Typography display="inline" sx={{ textDecoration: "underline" }}>
             {word}
           </Typography>
         </Tooltip>
