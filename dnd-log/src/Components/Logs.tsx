@@ -27,8 +27,20 @@ function LogListItem(props) {
           aria-controls="panel-content"
           id="panel-header"
           sx={{
-            "&hover": {
-              backgroundColor: "white",
+            "&.Mui-expanded": {
+              minHeight: 0,
+              "& .MuiAccordionSummary-content.Mui-expanded": {
+                margin: "12px 0",
+              },
+            },
+            "&:hover": {
+              bgcolor: "#1e3cd4", // use summary hover background
+
+              color: "success.light", // use summary hover color
+
+              "& .MuiAccordionSummary-expandIconWrapper .MuiSvgIcon-root": {
+                color: "success.light",
+              }, // use summary hover icon color
             },
           }}
         >
