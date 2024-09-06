@@ -47,8 +47,8 @@ export default function TabManager() {
   };
 
   return (
-    <Box>
-      <AppBar position="sticky">
+    <>
+      <AppBar position="sticky" sx={{ width: "100vw" }}>
         <Typography
           variant="h5"
           component={"div"}
@@ -70,12 +70,14 @@ export default function TabManager() {
           <Tab label="Add Log" {...a11yProps(0)} />
         </Tabs>
       </AppBar>
-      <CustomTabPanel value={value} index={0} dir="theme.direction">
-        <LogBookComponent />
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={1} dir="theme.direction">
-        <AddLog />
-      </CustomTabPanel>
-    </Box>
+      <Box sx={{ width: "100vw", overflow: "hidden" }}>
+        <CustomTabPanel value={value} index={0} dir="theme.direction">
+          <LogBookComponent />
+        </CustomTabPanel>
+        <CustomTabPanel value={value} index={1} dir="theme.direction">
+          <AddLog />
+        </CustomTabPanel>
+      </Box>
+    </>
   );
 }

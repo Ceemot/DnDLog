@@ -5,6 +5,7 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 
 export default function LogBookComponent() {
   const records = JSON.parse(JSON.stringify(data));
@@ -21,7 +22,7 @@ function LogListItem(props) {
   const record = props.record;
   const description = DescriptionText(record);
   return (
-    <div>
+    <Box sx={{ marginLeft: "25%", marginRight: "25%" }}>
       <Accordion>
         <AccordionSummary
           aria-controls="panel-content"
@@ -34,13 +35,11 @@ function LogListItem(props) {
               },
             },
             "&:hover": {
-              bgcolor: "#1e3cd4", // use summary hover background
-
-              color: "success.light", // use summary hover color
+              bgcolor: "#19284a",
 
               "& .MuiAccordionSummary-expandIconWrapper .MuiSvgIcon-root": {
                 color: "success.light",
-              }, // use summary hover icon color
+              },
             },
           }}
         >
@@ -54,6 +53,6 @@ function LogListItem(props) {
           </Typography>
         </AccordionDetails>
       </Accordion>
-    </div>
+    </Box>
   );
 }
